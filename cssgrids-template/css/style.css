@@ -10,9 +10,12 @@ body {
 }
 
 header, .box-1, .box-2, .box-3, 
-main, aside, .footer, .F1, .F2, .F3, .F4{
+aside, .footer, .F1, .F2, .F3, .F4{
 	border: 2px solid #111;
 	min-height: 150px;
+}
+main {
+	border: 2px solid #111;
 }
 
 /* Flexbox övning */
@@ -24,7 +27,7 @@ main, aside, .footer, .F1, .F2, .F3, .F4{
 
 
 	.button {
-		margin: 0 20px;
+		margin: 0 15px;
 	}
 
 	.buttons {
@@ -32,12 +35,15 @@ main, aside, .footer, .F1, .F2, .F3, .F4{
 		justify-content: flex-start;
 		align-items: center;
 		margin: 0 20px;
+		
 
 	}
 
 	.button2 {
+		display: flex;
 		margin-left:  auto;
 		align-self: center;
+		
 	}
 
 
@@ -57,16 +63,28 @@ main, aside, .footer, .F1, .F2, .F3, .F4{
 		display: flex;
 		border: 1px solid #111;
 		margin: 5px;
-		min-height: 150px;
-		min-width: 300px;
+		min-height: 100px;
+		/* min-width: 400px; */
+		flex-grow:1;
+		flex-shrink:1;
+		flex-basis:400px;
 		
+		
+	}
+
+	main {
+		margin-bottom: 20px;
 	}
 
 	aside {
 		display: flex;
 		flex-direction: column;
+		margin-bottom: 20px;
 		
 	}
+
+
+	/* ENDS */
 
 #container {
 	margin: 30px auto;
@@ -80,7 +98,6 @@ header {
 	padding: 0;
 	grid-column: 1 / 13;
 	width: 90%;
-	
 	margin: 10px auto;
 }
 
@@ -227,7 +244,7 @@ header, .content-sidebar {
 header, .box-1, .box-2, .box-3, 
 main, aside, .F1, .F2, .F3, .F4{
 	grid-column: 1 / 13;
-	height: 100px;
+	
 }
 
 .footer {
